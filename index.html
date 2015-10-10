@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="application/xhtml+xml;charset=utf-8"/>
+		<link rel="stylesheet" href="css/themes/stars/stars.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+		<script src="js/clock.js"></script>
+		<style>
+			#clock-master.clock-wrapper {
+				margin: calc(25% - 256px) auto;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			new Clock('assets/clock-face.svg', 'clock-master', '#clock');
+		</script>
+		<div id="clock"></div>
+	</body>
+</html>

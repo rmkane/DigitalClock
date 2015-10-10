@@ -1,0 +1,48 @@
+@import "variables.less";
+@import "mixins.less";
+
+body {
+	.tile(@bgTile, @bgColor);
+}
+
+.clock-wrapper {
+	svg {
+		position: absolute;
+		width: @clockWidth;
+		height: @clockHeight;
+	}
+	
+	position: relative;
+	top: 0;
+	left: 0;
+	width: @clockWidth;
+	height: @clockHeight;
+}
+
+svg.underlay {
+	path,
+	circle {
+	  fill: none;
+	  stroke: darken(@bgColor, @unlitDigitStrokeOpacity);
+	}
+
+	.lit {
+	  fill: @litDigitFill;
+	  stroke: darken(@litDigitFill, 20%);
+	}
+	
+	.blur(@litDigitBlur);
+}
+
+svg.overlay {
+	path,
+	circle {
+		fill: rgba(0, 0, 0, @unlitDigitFillOpacity);
+		stroke: darken(@litDigitFill, 5%);
+		stroke-opacity: 0;
+	}
+	.lit {
+		fill: @litDigitFill;
+		stroke-opacity: 1;
+	}
+}

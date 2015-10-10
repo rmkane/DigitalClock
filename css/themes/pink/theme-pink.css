@@ -1,0 +1,26 @@
+body {
+	background: #1C1C1C url('stardust.png') repeat top left;
+}
+
+.underlay path,
+.underlay circle {
+  fill: none;
+  stroke: #28023f;
+}
+
+.underlay .lit {
+  fill: #48f;
+  stroke: #FFF;
+}
+
+.overlay path,
+.overlay circle {
+  fill: rgba(0, 0, 0, 0.2);
+  stroke: #05f;
+  stroke-opacity: 0;
+}
+
+.overlay .lit {
+  fill: #1669f9;
+  stroke-opacity: 1;
+}
